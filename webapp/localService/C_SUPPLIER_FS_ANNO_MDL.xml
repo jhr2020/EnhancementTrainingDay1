@@ -1,0 +1,251 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value"><edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/></edmx:Reference>
+	<edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='')/$value"><edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='')/$value"><edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/></edmx:Reference>
+	<edmx:Reference Uri="../../../sap/c_supplier_fs_srv/$metadata"><edmx:Include Namespace="C_SUPPLIER_FS_SRV" Alias="SAP"/></edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="c_supplier_fs_anno_mdl.v1">
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_ActivityBySupplierType/SuplrActyUUID"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_ActivityBySupplierType/PurchaserRspNavLinkSemanticObj"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_ActivityBySupplierType/PurchaserRespNavLinkQueryPart"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_ActivityBySupplierType/SupplierActivity">
+				<Annotation Term="Common.Text" Path="SuplrActyName"><Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/></Annotation>
+			</Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_ActivityBySupplierType">
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Offene Aufgaben"/><PropertyValue Property="Value" Path="OpenTaskCount"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Name der Aktivität"/><PropertyValue Property="Value" Path="SuplrActyName"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Verantwortlicher"/><PropertyValue Property="Value" Path="PurchaserRespFullName"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Status"/><PropertyValue Property="Value" Path="SuplrActyLifecycleStatus"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Enddatum"/><PropertyValue Property="Value" Path="EndDate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Aufgaben gesamt"/><PropertyValue Property="Value" Path="TotalTaskCount"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_EvaluationBySupplierType/SuplrEvalScorecardUUID"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_EvaluationBySupplierType">
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Bewertungs-Scorecard"/><PropertyValue Property="Value" Path="SupplierEvalScorecard"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Einkaufskategorie"/><PropertyValue Property="Value" Path="PurchasingCategory"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Berechnete Punktzahl"/><PropertyValue Property="Value" Path="CalculatedScore"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Zielpunktzahl"/><PropertyValue Property="Value" Path="TargetScore"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Anzahl der Antworten"/><PropertyValue Property="Value" Path="NumberOfResponses"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Startdatum"/><PropertyValue Property="Value" Path="SuplrEvalStartDate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Enddatum"/><PropertyValue Property="Value" Path="SuplrEvalEndDate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_PurchaseOrderValueResult/DisplayCurrency"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_PurchaseOrderValueResult/AccountAssignmentNumber_fc"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_PurchaseOrderValueResult/CostCenter_fc"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_PurchaseOrderValueResult/WBSElementInternalID_fc"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_PurchaseOrderValueResult/P_DisplayCurrency"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_PurchaseOrderValueResult/P_DateFunction"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_PurchaseOrderValueResult/ID"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_PurchaseOrderValueResult">
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="CostCenter"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="WBSElementInternalID"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="AccountAssignmentNumber"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_PurgCatBySupplierType/PurgCatUUID"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_PurgCatBySupplierType/BusinessPartner"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_PurgCatBySupplierType/PurchaserRspNavLinkSemanticObj"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_PurgCatBySupplierType/PurchaserRespNavLinkQueryPart"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_PurgCatBySupplierType/PurgCatIsInactive">
+				<Annotation Term="Common.Text" Path="PurgCatIsInactive_Text"><Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/></Annotation>
+			</Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_PurgCatBySupplierType">
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Einkaufskategorie"/><PropertyValue Property="Value" Path="PurchasingCategory"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Verantwortlicher"/><PropertyValue Property="Value" Path="PurchaserRespFullName"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Status"/><PropertyValue Property="Value" Path="PurgCatIsInactive"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_PurgSpendOffContract2Result/AccountAssignmentNumber_fc"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_PurgSpendOffContract2Result/CostCenter_fc"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_PurgSpendOffContract2Result/WBSElementInternalID_fc"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_PurgSpendOffContract2Result/P_DisplayCurrency"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_PurgSpendOffContract2Result/P_StartDate"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_PurgSpendOffContract2Result/P_EndDate"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_PurgSpendOffContract2Result/ID"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_PurgSpendOffContract2Result">
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="CostCenter"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="WBSElementInternalID"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="AccountAssignmentNumber"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_PurRequisitionItemTypesResult/P_DisplayCurrency"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_PurRequisitionItemTypesResult/P_DateFunction"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_PurRequisitionItemTypesResult/ID"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_RequisitionTypeAnalysisResult/P_DateFunction"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_RequisitionTypeAnalysisResult/ID"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_SupplierbankdetailsType/Supplier"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_SupplierbankdetailsType/AuthorizationGroup"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_SupplierbankdetailsType">
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Bankkonto"/><PropertyValue Property="Value" Path="BankAccount"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Kontoinhaber"/><PropertyValue Property="Value" Path="BankAccountHolderName"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_SupplierCompanyDataType/AuthorizationGroup"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_SupplierCompanyDataType">
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Buchungskreis"/><PropertyValue Property="Value" Path="CompanyCode"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Ort"/><PropertyValue Property="Value" Path="CityName"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Land"/><PropertyValue Property="Value" Path="Country"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Zahlungssperre"/><PropertyValue Property="Value" Path="PaymentBlockingReason"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_SuppliercontractsType/PurchasingDocumentTypeName"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_SuppliercontractsType/PurchaseContract"><Annotation Term="Common.SemanticObject" String="PurchaseContract"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_SuppliercontractsType">
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Einkaufskontrakt"/><PropertyValue Property="Value" Path="PurchaseContract"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Einkaufsbelegart"/><PropertyValue Property="Value" Path="PurchaseContractType"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Freigabekennzeichen"/><PropertyValue Property="Value" Path="ReleaseCode"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Zielwert"/><PropertyValue Property="Value" Path="PurchaseContractTargetAmount"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_SupplierEvalOverallResult/P_DisplayCurrency"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_SupplierEvalOverallResult/P_StartDate"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_SupplierEvalOverallResult/P_EndDate"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_SupplierEvalOverallResult/P_DateFunction"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_SupplierEvalOverallResult/ID"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_SupplierEvaluationResult/P_DisplayCurrency"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_SupplierEvaluationResult/P_DateFunction"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_SupplierEvaluationResult/ID"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_SupplierFsType/AuthorizationGroup"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_SupplierFsType">
+				<Annotation Term="UI.DataPoint" Qualifier="CityName">
+					<Record><PropertyValue Property="Value" Path="CityName"/><PropertyValue Property="Title" String="Ort"/></Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="TotalSpendAmount">
+					<Record><PropertyValue Property="Value" Path="TotalSpendAmount"/><PropertyValue Property="Title" String="Jährliche Ausgaben"/></Record>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="CommunicationData">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Telefon"/><PropertyValue Property="Value" Path="InternationalPhoneNumber"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Mobiltelefon"/><PropertyValue Property="Value" Path="InternationalMobilePhoneNumber"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Faxnummer"/><PropertyValue Property="Value" Path="InternationalFaxNumber"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="E-Mail-Adresse"/><PropertyValue Property="Value" Path="EmailAddress"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+							</Collection>
+						</PropertyValue><PropertyValue Property="Label" String="Kommunikationsdaten"/></Record>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="CompanyData">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Anschrift"/><PropertyValue Property="Value" Path="AddressID"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Branche"/><PropertyValue Property="Value" Path="Industry"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Internationale Lokationsnummer"/><PropertyValue Property="Value" Path="InternationalLocationNumber"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Umsatzsteuer-Identifikationsnummer"/><PropertyValue Property="Value" Path="VATRegistration"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+							</Collection>
+						</PropertyValue><PropertyValue Property="Label" String="Unternehmensdaten"/></Record>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="OverallBlocks">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Buchungssperre"/><PropertyValue Property="Value" Path="PostingIsBlocked"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Einkaufssperre"/><PropertyValue Property="Value" Path="PurchasingIsBlocked"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+							</Collection>
+						</PropertyValue><PropertyValue Property="Label" String="Gesamtsperren"/></Record>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="Lieferant"/><PropertyValue Property="TypeNamePlural" String="Lieferanten"/><PropertyValue Property="TypeImageUrl" String="/sap/bc/ui5_ui5/sap/MD_SUPPLIERSS1/images/supplier.jpg"/>
+						<PropertyValue Property="Title">
+							<Record Type="UI.DataField"><PropertyValue Property="Label" String="Name"/><PropertyValue Property="Value" Path="SupplierName"/></Record>
+						</PropertyValue>
+						<PropertyValue Property="Description">
+							<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Supplier"/></Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Lieferant"/><PropertyValue Property="Value" Path="Supplier"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Name des Lieferanten"/><PropertyValue Property="Value" Path="SupplierName"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Anschrift"/><PropertyValue Property="Value" Path="AddressID"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Mobiltelefon"/><PropertyValue Property="Value" Path="InternationalMobilePhoneNumber"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_SupplierMaterialType/Material"><Annotation Term="Common.SemanticObject" String="Material"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_SupplierMaterialType">
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Material"/><PropertyValue Property="Value" Path="Material"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Materialart"/><PropertyValue Property="Value" Path="MaterialType"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Warengruppe"/><PropertyValue Property="Value" Path="MaterialGroup"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_SupplierpurchasingorgType/IncotermsClassificationName"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_SupplierpurchasingorgType">
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Einkaufsorganisation"/><PropertyValue Property="Value" Path="PurchasingOrganization"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="ABC-Kennzeichen"/><PropertyValue Property="Value" Path="SupplierABCClassificationCode"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Incoterms"/><PropertyValue Property="Value" Path="IncotermsClassification"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Mindestbestellwert"/><PropertyValue Property="Value" Path="MinimumOrderAmount"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_SupplierPurOrderType/PurchaseOrder"><Annotation Term="Common.SemanticObject" String="PurchaseOrder"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_SupplierPurOrderType">
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Bestellung"/><PropertyValue Property="Value" Path="PurchaseOrder"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Bestelldatum"/><PropertyValue Property="Value" Path="PurchaseOrderDate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Einkaufsorganisation"/><PropertyValue Property="Value" Path="PurchasingOrganization"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Status"/><PropertyValue Property="Value" Path="PurchasingDocumentStatus"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Bestellnettobetrag"/><PropertyValue Property="Value" Path="PurchaseOrderNetAmount"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_SupplierSuplrInvoiceType/SupplierInvoice"><Annotation Term="Common.SemanticObject" String="SupplierInvoice"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.C_SupplierSuplrInvoiceType">
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Rechnungsbelegnummer"/><PropertyValue Property="Value" Path="SupplierInvoice"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Belegkopftext"/><PropertyValue Property="Value" Path="DocumentHeaderText"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Buchhaltungsdatum"/><PropertyValue Property="Value" Path="PostingDate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Status"/><PropertyValue Property="Value" Path="SupplierInvoiceStatus"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Bruttorechnungsbetrag"/><PropertyValue Property="Value" Path="InvoiceGrossAmount"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.I_Supplier_VHType/AuthorizationGroup"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.I_Supplier_VHType/SupplierAccountGroup"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="C_SUPPLIER_FS_SRV.I_Supplier_VHType/IsBusinessPurposeCompleted"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
